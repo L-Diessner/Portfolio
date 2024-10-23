@@ -1,0 +1,27 @@
+---
+import { number } from "astro:schema";
+
+interface Props {
+   title: string;
+   skillLevel: number;
+   type: string; //Frontend, Backend, usw
+   desc: string;
+   //icon: any;
+}
+
+const { title, skillLevel, type, desc } = Astro.props;
+---
+
+<div class="flex flex-row bg-background rounded-xl p-4">
+   <!--Progress bar-->
+   <div class="flex flex-col">
+      <h2 class="text-text">{title}</h2>
+      <p class="text-primary">{type}</p>
+   </div>
+</div>
+
+<style>
+   h2 {
+      font-size: 3rem;
+   }
+</style>
