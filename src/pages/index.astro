@@ -7,8 +7,9 @@ import Navigation from "../components/Navigation.astro";
 ---
 
 <Layout title="Lukas Diessner | Developer">
+   <aside></aside>
+   <Navigation />
    <main>
-      <Navigation />
       <Start />
       <h2 class="text-dark">Über mich</h2>
       <p class="text-dark">Dooo longa Text iwie sche mocha</p>
@@ -41,17 +42,23 @@ import Navigation from "../components/Navigation.astro";
          />
       </ul>
    </main>
+   <aside></aside>
 </Layout>
 
 <style>
    main {
-      margin: auto;
-      padding: 1rem;
+      margin: 0;
+      padding: 0;
       width: 70%;
-      max-width: calc(100% - 2rem);
       color: theme(colors.light);
       font-size: 20px;
       line-height: 1.6;
+   }
+
+   aside {
+      margin: 0;
+      padding: 0;
+      width: 15%;
    }
    h2 {
       font-size: 3rem;
