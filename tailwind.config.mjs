@@ -7,10 +7,10 @@ export default {
       extend: {},
       colors: {
          light: "#e7eef9",
-         dark: "#090909",
-         primary: "#3473b7",
+         dark: "#272727",
+         primary: "#272727", //"#3473b7"
          secondary: "#321d67",
-         accent: "#5e278b",
+         accent: "#EEC638",
       },
    },
    plugins: [addDynamicIconSelectors()],
