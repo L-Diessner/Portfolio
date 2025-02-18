@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Technologies from "../components/Cards/Technologies.astro";
 import Start from "../components/Sections/Start.astro";
 import Navigation from "../components/Navigation.astro";
@@ -10,37 +9,21 @@ import Navigation from "../components/Navigation.astro";
    <aside></aside>
    <Navigation />
    <main>
-      <Start />
-      <h2 class="text-dark">Über mich</h2>
-      <p class="text-dark">Dooo longa Text iwie sche mocha</p>
-      <ul role="list" class="link-card-grid">
-         <Technologies
-            title="Javascript"
-            type="Frontend"
-            skillLevel={20}
-            desc="I woa do und do scho mit JS drin"
-         />
-         <Card
-            href="https://docs.astro.build/"
-            title="Documentation"
-            body="Learn how Astro works and explore the official API docs."
-         />
-         <Card
-            href="https://astro.build/integrations/"
-            title="Integrations"
-            body="Supercharge your project with new frameworks and libraries."
-         />
-         <Card
-            href="https://astro.build/themes/"
-            title="Themes"
-            body="Explore a galaxy of community-built starter themes."
-         />
-         <Card
-            href="https://astro.build/chat/"
-            title="Community"
-            body="Come say hi to our amazing Discord community. ❤️"
-         />
-      </ul>
+      <section class="no-background">
+         <Start />
+         <h2 class="text-light">Über mich</h2>
+         <p class="text-light">Dooo longa Text iwie sche mocha</p>
+         <ul role="list" class="link-card-grid">
+            <Technologies
+               title="Javascript"
+               type="Frontend"
+               skillLevel={20}
+               desc="I woa do und do scho mit JS drin"
+            />
+         </ul>
+      </section>
+
+      <section></section>
    </main>
    <aside></aside>
 </Layout>
@@ -66,6 +49,17 @@ import Navigation from "../components/Navigation.astro";
       line-height: 1;
       text-align: center;
       margin-bottom: 1em;
+   }
+
+   section {
+      position: fixed;
+      width: 70%;
+      height: 100vh;
+      z-index: -999;
+   }
+
+   .no-background {
+      background: none;
    }
    /*.astro-a {
 		position: absolute;

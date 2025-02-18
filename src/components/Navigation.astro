@@ -5,10 +5,11 @@ function scrollTo() {
 ---
 
 <nav class="flex flex-col justify-center font-oswald">
-   <button onclick="scrollTo()">Start</button>
-   <button onclick="scrollTo()">Skills</button>
-   <button onclick="scrollTo()">Projekte</button>
-   <button onclick="scrollTo()">Laufbahn</button>
+   <div class="styleblock"></div>
+   <button id="start" onclick="scrollTo()">Start</button>
+   <button id="skills" onclick="scrollTo()">Skills</button>
+   <button id="projects" onclick="scrollTo()">Projekte</button>
+   <button id="career" onclick="scrollTo()">Laufbahn</button>
 </nav>
 
 <style>
@@ -21,13 +22,21 @@ function scrollTo() {
       font-size: 1.5rem;
    }
 
+   .styleblock {
+      position: fixed;
+      z-index: -100;
+      height: 20rem;
+      width: 1rem;
+      border-radius: 15px;
+      background-color: theme(colors.dark);
+   }
+
    button {
-      text-shadow: 10rem black;
       margin-top: 1rem;
       margin-bottom: 1rem;
       transition: all 0.25s;
       transition-timing-function: ease-in-out;
-      color: theme(colors.light);
+      color: theme(colors.accent);
    }
 
    button:hover {
